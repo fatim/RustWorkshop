@@ -1,4 +1,4 @@
-![Alt text](rust_workshop.png "Diagramm")
+![Alt text](diagram.png "Diagramm")
 
 #### Application
 
@@ -25,14 +25,14 @@ let timeout = cfg.get_value("timeout");
 
 #### Service Client
 
-Service client hides all communication details from the Application and exposes 2 methods, "get_all" and "get_value".
-Service client is implemented as a binary crate which can be reused by other applictaions.
+- Service client hides all communication details from the Application and exposes 2 methods, "get_all" and "get_value".
+- Service client is implemented as a crate which can be reused by other applications.
 
 #### Service
 
-Service keeps configuration data as a collection of <string, string> Key/Value pairs.
-Data is partitioned by application name and environment name.
-Data is stored in memory collection and pre-seeded(for simplicity)
+- Service keeps configuration data as a collection of <string, string> Key/Value pairs.
+- Data is partitioned by application name and environment name.
+- Data is stored in memory collection and pre-seeded(for simplicity)
 
 ---
 
@@ -46,7 +46,7 @@ let timeout = cfg.get_value<u8>("timeout", 20); // not sure what correct Rust sy
 
 #### Advanced workshop ?
 
-Use real database/ORM instead of in-memory collection
-Replace JSON with GRPC
-Encrypt data on the server
-Enable POST/PATCH endpoint, protected by API key
+- Use real database/ORM instead of in-memory collection
+- Replace JSON with GRPC
+- Encrypt data on the server
+- Enable POST/PATCH endpoint, protected by API key
